@@ -38,7 +38,7 @@ import java.util.Scanner;
                     products.add(productRec);
 
 
-                    done = SafeInput.getYNConfirm(in, "Another person (y/n)? ");
+                    done = SafeInput.getYNConfirm(in, "Are you done? (y/n)? ");
 
 
                 } while (!done);
@@ -68,3 +68,8 @@ import java.util.Scanner;
                 }
             }
         }
+//000001, Pipeweed, Long Bottom Leaf, 600.0
+//000002, Lembas, Elven Wayfare Bread, 200.0
+//000003, Wine, Woodland Elf Wine, 400.0
+//000004, Mushrooms, Farmer Took’s Finest, 125.0
+//            000005, Mithril, Enchanted Dwarven Armor, 3000.0
