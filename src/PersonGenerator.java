@@ -11,7 +11,7 @@ import java.util.Scanner;
 //b.	Name (a String)
 //c.	Description (a String a short sentence)
 //d.	Cost (This is currency so it will be a Java double)
-        public class PersonReader {
+        public class PersonGenerator {
             public static void main(String[] args) {
                 ArrayList<String> folks = new ArrayList<>();
                 Scanner in = new Scanner(System.in);
