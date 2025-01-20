@@ -22,6 +22,9 @@ public class ProductReader {
 
             if (chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
                 target = chooser.getSelectedFile().toPath();  // this is a File object not a String filename
+                // Print the header
+                System.out.println(String.format("%-10s %-10s %-10s %-10s", "ID", "Name", "Description", "Cost"));
+                System.out.println("----------------------------------------------------------");
 
                 inFile = new Scanner(target);
 
