@@ -24,7 +24,7 @@ public class ProductReader {
                 target = chooser.getSelectedFile().toPath();  // this is a File object not a String filename
                 // Print the header
                 System.out.println(String.format("%-10s %-10s %-10s %-10s", "ID", "Name", "Description", "Cost"));
-                System.out.println("----------------------------------------------------------");
+                System.out.println("-------------------------------------------------");
 
                 inFile = new Scanner(target);
 
