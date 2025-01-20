@@ -11,7 +11,7 @@ import java.util.Scanner;
 //b.	Name (a String)
 //c.	Description (a String a short sentence)
 //d.	Cost (This is currency so it will be a Java double)
-        public class PersonGenerator {
+        public class ProductGenerator {
             public static void main(String[] args) {
                 ArrayList<String> products = new ArrayList<>();
                 Scanner in = new Scanner(System.in);
@@ -68,8 +68,3 @@ import java.util.Scanner;
                 }
             }
         }
-//000001, Pipeweed, Long Bottom Leaf, 600.0
-//000002, Lembas, Elven Wayfare Bread, 200.0
-//000003, Wine, Woodland Elf Wine, 400.0
-//000004, Mushrooms, Farmer Took’s Finest, 125.0
-//            000005, Mithril, Enchanted Dwarven Armor, 3000.0
