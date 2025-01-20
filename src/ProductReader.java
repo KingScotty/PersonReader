@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.util.Scanner;
 
-public class PersonReader {
+public class ProductReader {
     public static void main(String[] args) {
 
 
