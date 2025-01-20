@@ -13,36 +13,37 @@ import java.util.Scanner;
 //d.	Cost (This is currency so it will be a Java double)
         public class PersonGenerator {
             public static void main(String[] args) {
-                ArrayList<String> folks = new ArrayList<>();
+                ArrayList<String> products = new ArrayList<>();
                 Scanner in = new Scanner(System.in);
 
                 File workingDirectory = new File(System.getProperty("user.dir"));
-                Path file = Paths.get(workingDirectory.getPath() + "\\src\\personData.txt");
+                Path file = Paths.get(workingDirectory.getPath() + "\\src\\productData.txt");
 
                 Boolean done = false;
 
-                String personRec = "";
+                String productRec = "";
                 String ID = "";
                 String name = "";
-
                 String Description = "";
-                int cost = 0;
+                double cost = 0.0;
+
 
                 do {
-                    ID = SafeInput.getNonZeroLenString(in, "Enter the ID [6 digits]: ");
-                    name = SafeInput.getNonZeroLenString(in, "Enter the first name:");
+                    ID = SafeInput.getNonZeroLenString(in, "Enter the product ID [6 digits]: ");
+                    name = SafeInput.getNonZeroLenString(in, "Enter the product name:");
                     Description = SafeInput.getNonZeroLenString(in, "Enter the Description ");
                     cost = SafeInput.getInt(in, "Enter the cost ");
 
-                    personRec = ID + "," + firstName + "," + lastName + "," + Description + "," + cost;
-                    folks.add(personRec);
+                    productRec = ID + "," + name + "," + Description + "," + cost;
+                    products.add(productRec);
+
 
                     done = SafeInput.getYNConfirm(in, "Another person (y/n)? ");
 
 
                 } while (!done);
-                for (String person : folks) {
-                    System.out.println(person);
+                for (String product : products) {
+                    System.out.println(product);
                 }
 
                 try (BufferedWriter writer = new BufferedWriter(new FileWriter(file.toFile())))
@@ -50,7 +51,7 @@ import java.util.Scanner;
 
                     // Finally can write the file LOL!
 
-                    for(String rec : folks)
+                    for(String rec : products)
                     {
                         writer.write(rec, 0, rec.length());  // stupid syntax for write rec
                         // 0 is where to start (1st char) the write
